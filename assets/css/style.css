@@ -316,12 +316,15 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 140px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active {
+  /* max-height: 405px; */
+  max-height: 430px;
+}
 
 .sidebar-info {
   position: relative;
@@ -351,6 +354,7 @@ main {
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
+  margin: 3px 0px;
   border-radius: 8px;
 }
 
@@ -431,7 +435,7 @@ main {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   padding-bottom: 4px;
