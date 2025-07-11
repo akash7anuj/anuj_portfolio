@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/style1.css">
 </head>
 
 <body>
@@ -43,7 +44,11 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Anuj" width="80">
+          <!-- <img src="./assets/images/my-avatar.png" alt="Anuj" width="80"> -->
+          <!-- <img src="./assets/images/about_image/anuj_logo_image.jpg" alt="ANUJ KUMAR SINGH" class="logo"> -->
+          <!-- <img src="./assets/images/about_image/anuj_logo_image.jpg" alt="ANUJ KUMAR SINGH" class="thumbnail" onclick="openModal(this.src)"> -->
+          <a href="assets/images/about_image/anuj_logo_image.jpg" target="_blank"><img
+              src="assets/images/about_image/anuj_logo_image.jpg" class="logo"></a>
         </figure>
 
         <div class="info-content">
@@ -220,91 +225,94 @@
         <section class="about-text">
           <p>
             Hi, I'm Anuj, a passionate and driven Computer Applications student with a strong interest in Artificial
-            Intelligence, Machine Learning, and Software Development. I love turning innovative ideas into practical
+            Intelligence and Web Development. I love turning innovative ideas into practical
             solutions that can make a real-world impact.
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            I am a BCA student at Gopal Narayan Singh University, Jamuhar, pursuing my degree in Data Science and
+            Artificial Intelligence. I have a strong foundation in programming languages such as C, Core Java, and
+            Python, and I am passionate about Machine Learning, Deep Learning, and Natural Language Processing.
+            Additionally, I have experience in Full Stack Development using HTML, CSS, JavaScript, and Python
+            (Flask).
           </p>
         </section>
-
 
         <!--
           - service
         -->
 
-        <section class="service">
+        <section class=" testimonials">
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
           <ul class="service-list">
 
-            <li class="service-item">
-
+            <li class="service-item" data-testimonials-item>
               <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                " alt="design icon" width="40" data-testimonials-avatar>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title" data-testimonials-title>Pursuing BCA (DS & AI)</h4>
 
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                <p class="service-item-text testimonials-text" data-testimonials-text>
+                  I am currently pursuing my BCA with a specialization in Data Science and Artificial Intelligence.
                 </p>
+                <!-- </div> -->
+              </div>
+            </li>
+
+            <li class="service-item" data-testimonials-item="">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" data-testimonials-avatar>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-testimonials-title>Full Stack Developer</h4>
+
+                <p class="service-item-text testimonials-text" data-testimonials-text>
+                  Creating responsive and user-friendly web applications using the latest technologies like HTML, CSS,
+                  JavaScript, Bootstrap, and Python (Flask).
+                </p>
+
               </div>
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" data-testimonials-item>
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40" data-testimonials-avatar>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
+                <h4 class="h4 service-item-title" data-testimonials-title>ML & AI Engineer</h4>
+                <div data-testimonials-text>
+                  <p class="service-item-text testimonials-text">
+                    I am passionate about building intelligent systems that can learn from data and make predictions or
+                    decisions.
+                  </p>
+                </div>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" data-testimonials-item>
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40" data-testimonials-avatar>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
+                <h4 class="h4 service-item-title" data-testimonials-title>Learning New Technologies</h4>
+                <div data-testimonials-text>
+                  <p class="service-item-text testimonials-text">
+                    I am constantly exploring new tools and frameworks to enhance my skill set and stay updated with
+                    industry trends.
+                  </p>
+                </div>
               </div>
 
             </li>
@@ -324,23 +332,49 @@
 
           <ul class="testimonials-list has-scrollbar">
 
+            <li class="testimonials-item" data-testimonials-item>
+              <div class="content-card">
+
+                <figure class="testimonials-avatar-box">
+                  <!-- <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar> -->
+                  <img src="assets/images/icons/resume.png" alt="Resume" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>My Resume</h4>
+                <div data-testimonials-text>
+                  <div class="testimonials-text">
+                    <p class="testimonials-text truncated" data-testimonials-text>
+                      Here is my resume, which includes my educational background, skills, and projects. Feel free to
+                      view or download it.
+                    </p>
+
+                  </div>
+                  <div class="resume-buttons hidden">
+                    <a href="your-resume-link.pdf" target="_blank" class="btn-resume view">View</a>
+                    <a href="your-resume-link.pdf" download class="btn-resume download">Download</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                  <img src="assets\images\icons\linkedin.png" alt="LinkedIn" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>My LinkedIn Profile</h4>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
+                <div data-testimonials-text>
+                  <div class="testimonials-text">
+                    <p>
+                      Check out my LinkedIn profile to see my professional experience and connect with me.
+                    </p>
+                  </div>
+                  <div class="resume-buttons hidden">
+                    <a href="https://www.linkedin.com/in/akash7anuj" class="btn-resume view">View Profile</a>
+                  </div>
                 </div>
 
               </div>
@@ -350,20 +384,21 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                  <img src="assets\images\icons\github.png" alt="GitHub" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>My GitHub Profile</h4>
+                <div data-testimonials-text>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Check out my GitHub profile to see my projects and contributions.
+                    </p>
+                  </div>
+                  <div class="resume-buttons hidden">
+                    <a href="https://www.github.com/akash7anuj" class="btn-resume view">View Profile</a>
+                  </div>
                 </div>
+
 
               </div>
             </li>
@@ -372,41 +407,20 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                  <img src="assets\images\icons\leetcode.png" alt="Henry william" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>My LeetCode Profile</h4>
+                <div data-testimonials-text>
+                  <div class="testimonials-text">
+                    <p>
+                      Check out my LeetCode profile to see my coding challenges and solutions.
+                    </p>
+                  </div>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
+                  <div class="resume-buttons hidden">
+                    <a href="https://leetcode.com/akash7anuj/" target="_blank" class="btn-resume view">View Profile</a>
+                  </div>
                 </div>
 
               </div>
@@ -433,25 +447,20 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img width="80" data-modal-img>
               </figure>
 
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              <!-- <img src="./assets/images/icon-quote.svg" alt="quote icon"> -->
             </div>
 
             <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <h4 class="h3 modal-title" data-modal-title></h4>
 
-              <time datetime="2021-06-14">14 June, 2021</time>
+              <!-- <time datetime="2021-06-14">14 June, 2021</time> -->
 
               <div data-modal-text>
                 <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                 </p>
               </div>
 
@@ -468,43 +477,43 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Clients</h3>
+          <h3 class="h3 clients-title">Gallery</h3>
 
           <ul class="clients-list has-scrollbar">
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              <a href="assets\images\about_image\image Amity.jpg">
+                <img src="assets\images\about_image\award.jpg" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              <a href="assets\images\about_image\image Amity.jpg">
+                <img src="assets\images\about_image\image Amity.jpg" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              <a href="assets\images\about_image\frontend image.png">
+                <img src="assets\images\about_image\frontend image.png" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              <a href="assets\images\about_image\Google Developer Group.jpg">
+                <img src="assets\images\about_image\Google Developer Group.jpg" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              <a href="assets\images\about_image\Hackathon Participation Amity.jpg">
+                <img src="assets\images\about_image\Hackathon Participation Amity.jpg" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              <a href="assets\images\about_image\utkranti certificate.png">
+                <img src="assets\images\about_image\utkranti certificate.png" alt="client logo">
               </a>
             </li>
 
@@ -512,6 +521,42 @@
 
         </section>
 
+        <section class="lets-section">
+
+          <h3 class="h3 lets-title">Let's Connect</h3>
+
+          <ul class="lets">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    visit my contact section to get in touch.
+                  </p>
+                </div>
+                <div class="resume-buttons">
+                  <a class="btn-resume view navbar-link" data-nav-link>Contact</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item ">
+              <div class="content-card" data-testimonials-item>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    visit my resume section to learn more about my work.
+                  </p>
+                </div>
+                <div class="resume-buttons">
+                  <a class="btn-resume view navbar-link" data-nav-link>Resume</a>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+
+        </section>
       </article>
 
 
@@ -522,7 +567,7 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="resume" id="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -535,7 +580,7 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">SKILL</h3>
+            <h3 class="h3">SKILLS</h3>
           </div>
 
           <ol class="timeline-list">
@@ -575,23 +620,29 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Computer Vision <small
-                  style="color: rgb(228, 227, 226); padding-left: 5px;"> (YOLO, OpenCV)</small></h4>
+              <!-- <h4 class="h4 timeline-item-title">Computer Vision <small
+                  style="color: rgb(228, 227, 226); padding-left: 5px;"> (YOLO, OpenCV)</small></h4> -->
 
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Full Stack Development <small
-                  style="color: rgb(228, 227, 226); padding-left: 5px;"> (HTML, CSS, JavaScript, Python(flask))</small>
+              <h4 class="h4 timeline-item-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px;">
+                Computer Vision
+                <small style="color: rgb(228, 227, 226);"> (YOLO, OpenCV)</small>
               </h4>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">DSA <small style="color: rgb(228, 227, 226); padding-left: 5px;">
-                  (practice coding problems on leetcode)</small></h4>
+              <h4 class="h4 timeline-item-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px;">
+                Full Stack Development <small style="color: rgb(228, 227, 226);"> (HTML, CSS, JavaScript,
+                  Python(flask))</small>
+              </h4>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px;">
+                Data Structures and Algorithms</h4>
 
             </li>
 
@@ -607,14 +658,15 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3">EDUCATION</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Bachelor of Computer Applications (DS & Ai) <small
+              <h4 class="h4 timeline-item-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px;">
+                Bachelor of Computer Applications <p>(DS & Ai) </p><small
                   style="color: rgb(228, 227, 226); padding-left: 25px;"> (2024-27)</small></h4>
 
               <span>CGPA - 7.8</span>
@@ -627,8 +679,9 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Higher Secondary School <small class="ms-3"
-                  style="color: rgb(228, 227, 226); padding-left: 25px;"> (2022-24)</small></h4>
+              <h4 class="h4 timeline-item-title" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px;">
+                Higher Secondary School <small style="color: rgb(228, 227, 226); padding-left: 25px;"> (2022-24)</small>
+              </h4>
 
               <span>74.6 %</span>
 
@@ -657,123 +710,269 @@
 
         <section class="timeline">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">PROJECTS</h3>
             </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+            <ol class="timeline-list">
 
-          <ol class="timeline-list">
+              <li class="timeline-item">
 
-            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title"
+                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">
+                  Attendance System for Multi-Class Handling
+                  <small style="margin-left: 25px; font-size: 12px;"><a href="http://github.com/akash7anuj/GenieTalk"
+                      target="_blank">View Project</a></small>
+                </h4>
+                <p style="color: aliceblue; font-size: 14px;">Python, OpenCV, face_recognition, Flask, HTML, CSS, JS,
+                  Bootstrap, JSON</p>
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+                <div style="font-size: 12px;">
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                      <b>Using face recognition </b>to automate student attendance, verify teachers, and manage
+                      timetable-based
+                      sessions with live video streaming and recording and reducing manual attendance effort by over
+                      90%.
+                    </p>
+                  </div>
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                      <b>Auto-attendance marking </b>with duration tracking, intelligent classification
+                      (Teacher/Student/Unknown) and subject-wise video & attendance logging in organized directories.
+                    </p>
+                  </div>
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                      Built a <b>user-friendly web dashboard</b> for managing student/teacher profiles, uploading
+                      timetables,
+                      downloading attendance reports, and monitoring live classroom streams, with modular and scalable
+                      Python backend —supporting multi-class setup with real-time insights.
+                    </p>
+                  </div>
+                </div>
 
-              <span>2015 — Present</span>
+              </li>
 
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
+              <li class="timeline-item">
 
-            </li>
+                <h4 class="h4 timeline-item-title"
+                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">
+                  Multi-Language Vocabulary Learning System
+                  <small style="margin-left: 25px; font-size: 12px;"><a href="http://github.com/akash7anuj/GenieTalk"
+                      target="_blank">View Project</a></small>
+                </h4>
+                <p style="color: aliceblue; font-size: 14px;">Python (Flask), JavaScript, HTML/CSS, Google Translate,
+                  gTTS, Web Speech API, Bootstrap, JSON
+                </p>
 
-            <li class="timeline-item">
+                <div style="font-size: 12px;">
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                    </p>
+                  </div>
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                    </p>
+                  </div>
+                  <div style="display: flex;">
+                    <span>• </span>
+                    <p class="timeline-text" style="margin-left: 5px;">
+                    </p>
+                  </div>
+                </div>
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              </li>
 
-              <span>2013 — 2015</span>
+            </ol>
 
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
+          </section>
 
-            </li>
+          <section class="timeline">
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
               </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+              <h3 class="h3">Achievements</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">1st Runner-Up, Technovate 1.0 – IBM Day 2025</h4>
+
+                <p class="timeline-text">
+                  Awarded by IBM and Cognitel at GNSU for building a chatbot to solve a real problem during a
+                  university-level competition.
+                </p>
+
+              </li>
+
+              <li class="timeline-item">
+
+                <h4 class="h4 timeline-item-title">Hackathon Participant (Senior), Techphilia 8.0</h4>
+
+                <p class="timeline-text">
+                  Amity University Patna (Apr 2025),
+                  Participated in a hackathon focused on developing innovative solutions for real-world problems.
+                </p>
+
+              </li>
+
+            </ol>
+
+          </section>
+
+
+          <section class="skill">
+
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <div class="skills-list content-card" style="display: flex; flex-wrap: wrap; gap: 40px;">
+
+              <div class="techskill">
+                <h4 style="text-align: center; color: aliceblue;">Technical Skills</h4>
+                <ul class="skills-list content-card">
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Git & GitHub (Version Control)</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Linux OS</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Streamlit (for building AI apps)</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">VS Code, Jupyter Notebook</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Databases: MySQL, MongoDB</h5>
+                    </div>
+                  </li>
+
+                </ul>
               </div>
 
-            </li>
 
-            <li class="skills-item">
+              <div class="softskill">
+                <h4 style="text-align: center; color: aliceblue; font-size: 16pxki;">Soft Skills</h4>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+                <ul class="skills-list content-card">
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Problem Solving</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Team Management</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Project Management</h5>
+                    </div>
+                  </li>
+
+                  <li class="skills-item ">
+                    <div style="display: flex;">
+                      <span style="color: gold;">• </span>
+                      <h5 class="timeline-text h5" style="margin-left: 5px;">Critical Thinking</h5>
+                    </div>
+                  </li>
+
+
+                </ul>
+
+              </div>
+            </div>
+
+          </section>
+
+          <section class="timeline certificates">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
               </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
+              <h3 class="h3">Certificates</h3>
+            </div>
 
-            </li>
+            <ol class="timeline-list">
 
-            <li class="skills-item">
+              <li class="timeline-item">
 
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
+                <h4 class="h4 timeline-item-title"
+                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">Utkranti -
+                  Catalyst Kaksha Program – Participant<a href="http://github.com/akash7anuj/GenieTalk" target="_blank"
+                    style="margin-left: 25px; font-size: 12px;">View</a></h4>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
+                <p class="timeline-text">
+                  Hands-on workshop on “Idea To Business Plan” organized by IIT Mandi Catalyst at GNSU in Sasaram.
+                </p>
 
-            </li>
+              </li>
 
-            <li class="skills-item">
+              <li class="timeline-item">
 
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
+                <h4 class="h4 timeline-item-title"
+                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">Front End
+                  Technologies – IBM Career Education Program <a
+                    href="https://courses.ibmcep.cognitiveclass.ai/certificates/8120e44d3c70440b920adb2577daa26a"
+                    target="_blank" style="margin-left: 25px; font-size: 12px;">View</a></h4>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
+                <p class="timeline-text">
+                  Completed training in HTML, CSS, and JavaScript as part of IBM’s Front End Technologies course.
+                </p>
 
-            </li>
+              </li>
 
-          </ul>
+            </ol>
 
-        </section>
+          </section>
+
+
 
       </article>
 
@@ -800,7 +999,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>AI & ML</button>
             </li>
 
             <li class="filter-item">
@@ -809,6 +1008,10 @@
 
             <li class="filter-item">
               <button data-filter-btn>Web development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Others</button>
             </li>
 
           </ul>
@@ -832,7 +1035,7 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>AI & ML</button>
               </li>
 
               <li class="select-item">
@@ -843,116 +1046,120 @@
                 <button data-select-item>Web development</button>
               </li>
 
+              <li class="select-item">
+                <button data-select-item>Others</button>
+              </li>
+
             </ul>
 
           </div>
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/akash7anuj/GenieTalk.git" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="assets/images/project_image/GenieTalk.png" alt="GenieTalk" loading="GenieTalk">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">GenieTalk</h3>                
 
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
+                <p class="project-category">Interactive AI chatbot</p>
 
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="https://github.com/akash7anuj/Attendance_System.git" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="assets\images\project_image\attendance.png" alt="Attendance System" loading="Attendance System">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">Attendance System</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">AI-powered smart attendance system to automate student attendance</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/akash7anuj/Vocabulary-Learning-System.git" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="assets/images/project_image/speak.png" alt="Vocabulary Learning System" loading="Vocabulary Learning System">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">Vocabulary Learning System</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Multi-Language Vocabulary Learning System</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="ai & ml">
+              <a href="https://github.com/akash7anuj/Text-transcription-for-visually-challenged-person.git" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="assets/images/project_image/visually_person.png" alt="Text Transcription for Visually Challenged Persons" loading="isually Challenged Persons">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">Real-time video to text transcription for visually challenged person</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ai & ml">
+              <a href="https://github.com/akash7anuj/Detection-in-C_Vision.git" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project_image/obj_detection.png" alt="Detection in Computer-Vision" loading="Detection in Computer-Vision">
+                </figure>
+
+                <h3 class="project-title">Detection in Computer-Vision</h3>
+
+                <p class="project-category">object detection and classification based on OpenCV </p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/akash7anuj/Frontend-work.git">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project_image/frontend_work.png" alt="My Frontend-work" loading="My Frontend-work">
+                </figure>
+
+                <h3 class="project-title">My Frontend-work</h3>
+
+                <p class="project-category">Frontend-work of my class and projects</p>
 
               </a>
             </li>
@@ -968,9 +1175,9 @@
                   <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title">Hackathon AUP GreenBytes</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category"></p>
 
               </a>
             </li>
@@ -1223,13 +1430,13 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
+        <!-- <section class="mapbox" data-mapbox>
           <figure>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
-        </section>
+        </section> -->
 
         <section class="contact-form">
 
@@ -1239,6 +1446,8 @@
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
+              <input type="tel" name="phone" class="form-input" placeholder="Phone number" required data-form-input>
 
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>

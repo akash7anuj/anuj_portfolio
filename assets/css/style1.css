@@ -1,0 +1,41 @@
+.resume-buttons {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.btn-resume {
+    padding: 4px 20px;
+    font-size: 15px;
+    color: #f1c40f;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #f1c40f;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+}
+
+.btn-resume:hover {
+    background: rgb(10, 10, 10);
+    /* color: whitesmoke; */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+}
+.lets-title {
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1022px) {
+    .lets {
+        display: inline;
+    }
+    .lets-title{
+        margin-bottom: 0px;
+    }
+    .testimonials-item{
+        margin-bottom: 10px;
+    }
+}
+

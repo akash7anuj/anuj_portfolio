@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Small image style */
+    .thumbnail {
+      width: 200px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1;
+      padding-top: 60px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.8); 
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 15px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Thumbnail image -->
+<a href="assets/images/about_image/anuj_logo_image.jpg" target="_blank"><img src="assets/images/about_image/anuj_logo_image.jpg" class="thumbnail" onclick="openModal(this.src)"></a>
+
+<!-- Modal structure -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<p>anuj_logo_image</p>
+
+<script>
+  function openModal(src) {
+    document.getElementById("imageModal").style.display = "block";
+    document.getElementById("modalImage").src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
