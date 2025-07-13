@@ -39,3 +39,42 @@
     }
 }
 
+
+.blog-modal {
+  display: none;              
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.blog-modal-content {
+   background: hsl(0, 0%, 7%);
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+   border: 1px solid var(--jet);
+}
+
+.blog-modal-close {
+  position: absolute;
+  top: 3rem; right: 3rem;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.blog-modal-content img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+
