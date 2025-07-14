@@ -302,8 +302,9 @@ article.active {
 .content-card {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 15px;
-  padding-top: 45px;
+  padding: 30px;
+  padding-top: 25px;
+  
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   cursor: pointer;
@@ -666,6 +667,8 @@ main {
 
 .testimonials-item-title {
   margin-bottom: 7px;
+      text-align: center;
+
 }
 
 .testimonials-text {
@@ -778,8 +781,10 @@ main {
   background: var(--bg-gradient-onyx);
   width: max-content;
   border-radius: 14px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   box-shadow: var(--shadow-2);
+  margin-left: 1rem;
+
 }
 
 .modal-img-wrapper>img {
