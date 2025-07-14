@@ -23,6 +23,7 @@
     /* color: whitesmoke; */
     box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
 }
+
 .lets-title {
     margin-bottom: 30px;
 }
@@ -31,50 +32,83 @@
     .lets {
         display: inline;
     }
-    .lets-title{
+
+    .lets-title {
         margin-bottom: 0px;
     }
-    .testimonials-item{
+
+    .testimonials-item {
         margin-bottom: 10px;
     }
 }
 
 
 .blog-modal {
-  display: none;              
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 
 .blog-modal-content {
-   background: hsl(0, 0%, 7%);
-  padding: 40px;
-  max-width: 600px;
-  width: 90%;
-  border-radius: 20px;
-  position: relative;
-  cursor: pointer;
-  border: 1px solid var(--jet);
+    background: hsl(0, 0%, 7%);
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--jet);
+
+    max-height: 95vh;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    
+}
+
+.blog-modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.blog-modal-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+    color: var(--light-gray-70);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+}
+
+.blog-modal-meta .dot {
+    background: var(--light-gray-70);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0 4px;
 }
 
 .blog-modal-close {
-  position: absolute;
-  top: 3rem; right: 3rem;
-  font-size: 24px;
-  cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .blog-modal-content img {
-  max-width: 100%;
-  display: block;
-  margin-bottom: 15px;
-  border-radius: 15px;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 15px;
 }
-
-

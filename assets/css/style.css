@@ -909,10 +909,20 @@ main {
 }
 
 .timeline-item-title {
-  font-size: var(--fs-6);
+  font-size: var(--fs-4);
   line-height: 1.3;
   margin-bottom: 7px;
+  
+  display: inline-flex;
+    flex-wrap: wrap;      /* allow text to wrap */
+    align-items: flex-end;
 }
+
+
+  .timeline-item-title a {
+    margin-left: 0.3em;    /* space before the icon */
+    flex-shrink: 0;        /* prevent the link from wrapping onto its own line */
+  }
 
 .timeline-list span {
   color: var(--vegas-gold);
@@ -1239,7 +1249,7 @@ main {
 
 .blog-banner-box img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: var(--transition-1);
 }
@@ -1464,6 +1474,40 @@ textarea.form-input::-webkit-resizer {
     border-radius: 20px;
   }
 
+
+  .goal-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0 -15px;
+    padding: 25px;
+    padding-bottom: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 25px;
+
+  }
+
+  .goal-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .goal-text{
+    color: var(--vegas-gold);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-left: 1rem;
+  }
+
+ 
 }
 
 
@@ -1484,7 +1528,7 @@ textarea.form-input::-webkit-resizer {
      */
 
     --fs-1: 32px;
-    --fs-2: 24px;
+    --fs-2: 20px;
     --fs-3: 26px;
     --fs-4: 18px;
     --fs-6: 15px;
@@ -1727,9 +1771,35 @@ textarea.form-input::-webkit-resizer {
 
   .clients-list {
     gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
+    /* margin: 0 -30px;
+    padding: 45px; */
     scroll-padding-inline: 45px;
+  }
+
+  .goal-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0 -15px;
+    padding: 25px;
+    padding-bottom: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 25px;
+
+  }
+
+  
+
+  .goal-text{
+    color: var(--vegas-gold);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+    margin-top: 10px;
   }
 
   .clients-item {
@@ -1948,7 +2018,20 @@ textarea.form-input::-webkit-resizer {
   .certificates {
     margin-top: 10%;
   }
+
+  .timeline-item-title{
+    display: inline-flex
+;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
+.timeline-item-title a {
+    margin-left: 0.3em;
+    flex-shrink: 0;
+
+  }
+}
+
 
 
 
@@ -2114,6 +2197,8 @@ textarea.form-input::-webkit-resizer {
   body::-webkit-scrollbar-button {
     height: 60px;
   }
+
+
 
 
 

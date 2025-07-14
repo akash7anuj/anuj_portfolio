@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="stylesheet" href="assets/css/style1.css">
 </head>
@@ -137,8 +138,8 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://wa.me/918797448400?text=Hii%20Anuj%0AHow%20are%20you%3F" class="social-link" target="_blank"
-              rel="noopener noreferrer">
+            <a href="https://wa.me/918797448400?text=Hii%20Anuj%0AHow%20are%20you%3F" class="social-link"
+              target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
           </li>
@@ -371,8 +372,8 @@
 
                 </div>
                 <div class="resume-buttons hidden">
-                  <a href="your-resume-link.pdf" target="_blank" class="btn-resume view">View</a>
-                  <a href="your-resume-link.pdf" download class="btn-resume download">Download</a>
+                  <a href="assets/ANUJ resume.pdf" target="_blank" class="btn-resume view">View</a>
+                  <a href="assets/ANUJ resume.pdf" download class="btn-resume download">Download</a>
                 </div>
                 <!-- </div> -->
               </div>
@@ -394,7 +395,8 @@
                   </p>
                 </div>
                 <div class="resume-buttons hidden">
-                  <a href="https://www.linkedin.com/in/akash7anuj" class="btn-resume view">View Profile</a>
+                  <a href="https://www.linkedin.com/in/akash7anuj" class="btn-resume view" target="_blank">View
+                    Profile</a>
                 </div>
                 <!-- </div> -->
 
@@ -416,7 +418,7 @@
                   </p>
                 </div>
                 <div class="resume-buttons hidden">
-                  <a href="https://www.github.com/akash7anuj" class="btn-resume view">View Profile</a>
+                  <a href="https://www.github.com/akash7anuj" class="btn-resume view" target="_blank">View Profile</a>
                 </div>
                 <!-- </div> -->
 
@@ -493,37 +495,70 @@
 
         <section class=" testimonials">
 
-          <h3 class="h3 service-title">Future Goals</h3>
+          <h3 class="h3 goal-heading">Future Goals</h3>
 
-          <ul class="service-list">
+          <ul class="goal-list  has-scrollbar">
 
-            <li class="service-item" data-testimonials-item>
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40" data-testimonials-avatar>
+            <li class="testimonials-item service-item" data-testimonials-item>
+              <div class="goal-img">
+                <img src="./assets/images/icon-dev.svg
+                " alt="design icon" width="40" data-testimonials-avatar class="goal-icon">
+                <p class="goal-text">Project</p>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title" data-testimonials-title></h4>
+                <h4 class="h4 service-item-title" data-testimonials-title>Emotion-Aware Content Recommender</h4>
 
                 <p class="service-item-text testimonials-text" data-testimonials-text>
-                  <!-- I am currently pursuing my BCA with a specialization in Data Science and Artificial Intelligence. -->
+                  A web app that listens to your text or voice input and detects your emotional tone and determine your
+                  current emotion (e.g. joy, sadness, anger).
+                  <br><br>
+                  Based on your mood, it suggests calming exercises, uplifting music, video or helpful articles—along
+                  with links—so you can feel better right away.
                 </p>
 
               </div>
             </li>
 
-            <li class="service-item" data-testimonials-item>
-              <div class="service-icon-box">
+            <li class="testimonials-item service-item" data-testimonials-item>
+              <div class="goal-img">
                 <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40" data-testimonials-avatar>
+                " alt="design icon" width="40" data-testimonials-avatar class="goal-icon">
+                <p class="goal-text">Learning</p>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title" data-testimonials-title></h4>
+                <h4 class="h4 service-item-title" data-testimonials-title>Deep Dive in AI</h4>
 
                 <p class="service-item-text testimonials-text" data-testimonials-text>
-                  <!-- I am currently pursuing my BCA with a specialization in Data Science and Artificial Intelligence. -->
+                  Master AI Foundations & Practical ML -(Math (linear algebra, probability, calculus), and core ML
+                  algorithms)
+                  <br><br>
+                  Specialize in Deep Learning & NLP
+                  <br><br>
+                  Dive into Generative AI (Reinforcement Learning, and Multi-modal AI)
+
+                </p>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item service-item" data-testimonials-item>
+              <div class="goal-img">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40" data-testimonials-avatar class="goal-icon">
+                <p class="goal-text">Challenge</p>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-testimonials-title>Read and complete one book every month.</h4>
+
+                <p class="service-item-text testimonials-text" data-testimonials-text>
+                  I believe that true learning comes from continuous effort and curiosity. Whether it's a book on
+                  Artificial Intelligence, self-development, or creativity, every book teaches something valuable.
+                  <br><br>
+                  This challenge isn't just about reading—it's about building a lifelong habit of learning and
+                  self-growth.
                 </p>
 
               </div>
@@ -531,6 +566,9 @@
 
           </ul>
         </section>
+
+
+
 
         <!--
           - clients
@@ -543,40 +581,45 @@
           <ul class="clients-list has-scrollbar">
 
             <li class="clients-item">
-              <a href="assets\images\about_image\award.jpg">
+              <a href="assets\images\about_image\award.jpg" target="_blank">
                 <img src="assets\images\about_image\award.jpg" alt="client logo" loading="lazy">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="assets\images\about_image\image Amity.jpg">
+              <a href="assets\images\about_image\image Amity.jpg" target="_blank">
                 <img src="assets\images\about_image\image Amity.jpg" alt="client logo" loading="lazy">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="assets\images\about_image\frontend image.png">
+              <a href="assets\images\about_image\frontend image.png" target="_blank">
                 <img src="assets\images\about_image\frontend image.png" alt="client logo" loading="lazy">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="assets\images\about_image\Google Developer Group.jpg">
+              <a href="assets\images\about_image\Google Developer Group.jpg" target="_blank">
                 <img src="assets\images\about_image\Google Developer Group.jpg" alt="client logo" loading="lazy">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="assets\images\about_image\Hackathon Participation Amity.jpg">
+              <a href="assets\images\about_image\Hackathon Participation Amity.jpg" target="_blank">
                 <img src="assets\images\about_image\Hackathon Participation Amity.jpg" alt="client logo" loading="lazy">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="assets\images\about_image\utkranti certificate.png">
+              <a href="assets\images\about_image\utkranti certificate.png" target="_blank">
                 <img src="assets\images\about_image\utkranti certificate.png" alt="client logo" loading="lazy">
               </a>
             </li>
+
+            <li class="clients-item">
+              <a href="assets\images\about_image\Quiz.jpg" target="_blank">
+                <img src="assets\images\about_image\Quiz.jpg" alt="client logo" loading="lazy">
+              </a>
 
           </ul>
 
@@ -786,11 +829,12 @@
 
               <li class="timeline-item">
 
-                <h4 class="h4 timeline-item-title"
-                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">
+                <h4 class="h4 timeline-item-title">
                   Attendance System for Multi-Class Handling
-                  <small style="margin-left: 25px; font-size: 12px;"><a href="http://github.com/akash7anuj/GenieTalk"
-                      target="_blank">View Project</a></small>
+                  <a href="https://github.com/akash7anuj/Attendance_System.git" target="_blank"
+                    rel="noopener noreferrer" aria-label="View on GitHub">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
                 </h4>
                 <p style="color: aliceblue; font-size: 14px;">Python, OpenCV, face_recognition, Flask, HTML, CSS, JS,
                   Bootstrap, JSON</p>
@@ -822,11 +866,12 @@
 
               <li class="timeline-item">
 
-                <h4 class="h4 timeline-item-title"
-                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">
+                <h4 class="h4 timeline-item-title">
                   Multi-Language Vocabulary Learning System
-                  <small style="margin-left: 25px; font-size: 12px;"><a href="http://github.com/akash7anuj/GenieTalk"
-                      target="_blank">View Project</a></small>
+                  <a href="https://github.com/akash7anuj/Vocabulary-Learning-System" target="_blank"
+                    rel="noopener noreferrer" aria-label="View on GitHub">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
                 </h4>
                 <p style="color: aliceblue; font-size: 14px;">Python (Flask), JavaScript, HTML/CSS, Google Translate,
                   gTTS, Web Speech API, Bootstrap, JSON
@@ -1003,11 +1048,13 @@
             <ol class="timeline-list">
 
               <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Utkranti -
+                  Catalyst Kaksha Program – Participant
+                  <a href="https://shorturl.at/VNkaz" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
 
-                <h4 class="h4 timeline-item-title"
-                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">Utkranti -
-                  Catalyst Kaksha Program – Participant<a href="http://github.com/akash7anuj/GenieTalk" target="_blank"
-                    style="margin-left: 25px; font-size: 12px;">View</a></h4>
 
                 <p class="timeline-text">
                   Hands-on workshop on “Idea To Business Plan” organized by IIT Mandi Catalyst at GNSU in Sasaram.
@@ -1017,11 +1064,14 @@
 
               <li class="timeline-item">
 
-                <h4 class="h4 timeline-item-title"
-                  style="display: flex; align-items: center; font-size: 18px; flex-wrap: wrap; gap: 4px;">Front End
-                  Technologies – IBM Career Education Program <a
-                    href="https://courses.ibmcep.cognitiveclass.ai/certificates/8120e44d3c70440b920adb2577daa26a"
-                    target="_blank" style="margin-left: 25px; font-size: 12px;">View</a></h4>
+                <h4 class="h4 timeline-item-title">Front End
+                  Technologies – IBM Career Education Program
+
+                  <a href="https://courses.ibmcep.cognitiveclass.ai/certificates/8120e44d3c70440b920adb2577daa26a"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
 
                 <p class="timeline-text">
                   Completed training in HTML, CSS, and JavaScript as part of IBM’s Front End Technologies course.
@@ -1242,7 +1292,8 @@
 
                 <h3 class="project-title">Emotion detection and classification</h3>
 
-                <p class="project-category p-text">Emotion detection and classification using NLP, ML & DL techniques</p>
+                <p class="project-category p-text">Emotion detection and classification using NLP, ML & DL techniques
+                </p>
 
               </a>
             </li>
@@ -1353,7 +1404,8 @@
 
                 <h3 class="project-title">Market Basket Analysis</h3>
 
-                <p class="project-category p-text">Market basket analysis using Apriori algorithm for association rule mining
+                <p class="project-category p-text">Market basket analysis using Apriori algorithm for association rule
+                  mining
                 </p>
 
               </a>
@@ -1390,7 +1442,8 @@
 
                 <h3 class="project-title">Link Download Frontend</h3>
 
-                <p class="project-category p-text">Dashboard for social media link download based on video, audio etc...</p>
+                <p class="project-category p-text">Dashboard for social media link download based on video, audio etc...
+                </p>
 
               </a>
             </li>
@@ -1408,7 +1461,8 @@
 
                 <h3 class="project-title">My First Web Page </h3>
 
-                <p class="project-category p-text">My first web page built using HTML and CSS to experiment with design and
+                <p class="project-category p-text">My first web page built using HTML and CSS to experiment with design
+                  and
                   layout.</p>
 
               </a>
@@ -1470,9 +1524,9 @@
               <button data-filter-btn-blog>Blogs</button>
             </li>
 
-            <li class="filter-item">
+            <!-- <li class="filter-item">
               <button data-filter-btn-blog>Learning</button>
-            </li>
+            </li> -->
 
             <li class="filter-item">
               <button data-filter-btn-blog>Others</button>
@@ -1514,9 +1568,9 @@
                 <button data-select-item-blog>Blogs</button>
               </li>
 
-              <li class="select-item">
+              <!-- <li class="select-item">
                 <button data-select-item-blog>Learning</button>
-              </li>
+              </li> -->
 
               <li class="select-item">
                 <button data-select-item-blog>Others</button>
@@ -1529,22 +1583,21 @@
           <ul class="blog-posts-list">
 
 
-            <li class="project-item blog-post-item active" data-filter-item-blog data-category="gallery">
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="gallery,achievements">
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="assets/images/about_image/award.jpg" alt="Gallery item" loading="lazy">
                 </figure>
                 <div class="blog-content">
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Hackathon</p>
                     <span class="dot"></span>
-                    <time datetime="2022-02-23">Feb 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 10 & 11, 2025</time>
                   </div>
-                  <h3 class="h3 blog-item-title">Gallery Showcase</h3>
+                  <h3 class="h3 blog-item-title">1st Runner-Up, Technovate 1.0</h3>
                   <p class="blog-text testimonials-text">
-                    A collection of work and achievements from various creative projects. Creating responsive and
-                    user-friendly web applications using the latest technologies like HTML, CSS,
-                    JavaScript, Bootstrap, and Python (Flask).
+                    Awarded by IBM and Cognitel on IBM Day 2025 at GNSU for developing a chatbot that addressed a
+                    real-world problem.
                 </div>
               </a>
             </li>
@@ -1552,36 +1605,127 @@
             <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
               <a href="#">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Certificate" loading="lazy">
+                  <img src="assets/images/about_image/Hackathon Participation Amity.jpg" alt="Certificate"
+                    loading="lazy">
                 </figure>
                 <div class="blog-content">
                   <div class="blog-meta">
-                    <p class="blog-category">Certification</p>
+                    <p class="blog-category">Certificate</p>
                     <span class="dot"></span>
-                    <time datetime="2022-05-15">May 15, 2022</time>
+                    <time datetime="2022-05-15">Apr 22, 2025</time>
                   </div>
-                  <h3 class="h3 blog-item-title">Certificate of Excellence</h3>
+                  <h3 class="h3 blog-item-title">Certificate of Participation</h3>
+                  <div class="blog-text testimonials-text">
+                    <p>
+                      Hackathon (Senior) Techphilia 8.0 - Amity University Patna (Apr 2025)
+                    </p>
+                    <p>
+                      Participated as Team Leader, develop an AI-powered energy optimization system that forecasts
+                      consumption and promotes sustainability
+                    </p>
+
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="gallery,achievements">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="assets/images/about_image/image Amity.jpg" alt="achievements" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Hackathon</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-06-01">Apr 22, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Hackathon(Senior) Techphilia-8.0</h3>
                   <p class="blog-text testimonials-text">
-                    Recognized for outstanding performance in design and development.
+                    Receiving our Certificate from the organizers.
                   </p>
                 </div>
               </a>
             </li>
 
-            <li class="project-item blog-post-item active" data-filter-item-blog data-category="achievements">
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
               <a href="#">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest" loading="lazy">
+                  <img src="assets\images\about_image\utkranti certificate.png" alt="Certificate" loading="lazy">
                 </figure>
                 <div class="blog-content">
                   <div class="blog-meta">
-                    <p class="blog-category">Creative</p>
+                    <p class="blog-category">Certificate</p>
                     <span class="dot"></span>
-                    <time datetime="2022-06-01">Jun 01, 2022</time>
+                    <time datetime="2022-05-15">Sept 16 & 17, 2024</time>
                   </div>
-                  <h3 class="h3 blog-item-title">Design Digest #80</h3>
+                  <h3 class="h3 blog-item-title">Utkranti - Catalyst Kaksha Program</h3>
                   <p class="blog-text testimonials-text">
-                    Highlights from recent design explorations and innovations.
+                    Participated in the hands-on workshop “Idea to Business Plan,” organized by IIT Mandi Catalyst at
+                    GNSU, Sasaram.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="assets/images/about_image/Google Developer Group.jpg" alt="Certificate" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Apr 22, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Certificate of Participation</h3>
+                  <p class="blog-text testimonials-text">
+                    Awarded a Certificate of Participation by Google Developer Group Patna for active contribution in
+                    the Hackathon (Senior) on 22 April 2025.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="assets/images/about_image/frontend image.png" alt="Certificate" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Apr 24, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Certificate of Completion</h3>
+                  <div class="blog-text testimonials-text">
+                    <p>
+                      Front End Technologies – IBM Career Education Program
+                    </p>
+                    <p>
+                      Completed training in HTML, CSS, and JavaScript as part of IBM’s Front End Technologies course.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="assets/images/about_image/Quiz.jpg" alt="Certificate" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Jul 02, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Certificate of Participation</h3>
+                  <p class="blog-text testimonials-text">
+                    Quiz on Role of Women in Shaping the New India.
                   </p>
                 </div>
               </a>
@@ -1605,6 +1749,12 @@
           <figure>
             <img id="modalImage" src="" alt="Blog Image" loading="lazy">
           </figure>
+
+          <div class="blog-modal-meta">
+            <p id="modalCategory" class="blog-category"></p>
+            <span class="dot"></span>
+            <time id="modalDate" datetime=""></time>
+          </div>
 
           <h3 class="h3 modal-title" id="modalTitle"></h3>
           <p id="modalText" class="service-item-text"></p>

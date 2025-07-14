@@ -71,19 +71,24 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// ========== GENERIC FILTER FUNCTION (Portfolio, Blog, etc.) ========== //
 function setupFilter(suffix = '') {
-  const sel = document.querySelector(`[data-select${suffix}]`);
-  const selItems = document.querySelectorAll(`[data-select-item${suffix}]`);
-  const selValue = document.querySelector(`[data-select-value${suffix}]`);
-  const filterBtns = document.querySelectorAll(`[data-filter-btn${suffix}]`);
+  const sel         = document.querySelector(`[data-select${suffix}]`);
+  const selItems    = document.querySelectorAll(`[data-select-item${suffix}]`);
+  const selValue    = document.querySelector(`[data-select-value${suffix}]`);
+  const filterBtns  = document.querySelectorAll(`[data-filter-btn${suffix}]`);
   const filterItems = document.querySelectorAll(`[data-filter-item${suffix}]`);
 
   if (!sel || !selItems.length || !selValue || !filterItems.length) return;
 
   const runFilter = (value) => {
     filterItems.forEach(el => {
-      const match = value === 'all' || value === el.dataset.category;
+      // split on commas, trim whitespace
+      const cats = el.dataset.category
+        .toLowerCase()
+        .split(/\s*,\s*/)
+        .map(c => c.trim());
+      // match if 'all' or exact category
+      const match = value === 'all' || cats.includes(value);
       el.classList.toggle('active', match);
     });
   };
@@ -99,14 +104,13 @@ function setupFilter(suffix = '') {
     });
   });
 
-  let lastClickedBtn = filterBtns.length ? filterBtns[0] : null;
+  let lastClickedBtn = filterBtns[0] || null;
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const value = btn.innerText.toLowerCase();
       selValue.innerText = btn.innerText;
       runFilter(value);
-
       if (lastClickedBtn) lastClickedBtn.classList.remove("active");
       btn.classList.add("active");
       lastClickedBtn = btn;
@@ -114,43 +118,100 @@ function setupFilter(suffix = '') {
   });
 }
 
-// Setup filters
-setupFilter();         // For portfolio or default section
-setupFilter('-blog');  // For blog section
+// initialize
+setupFilter();
+setupFilter('-blog');
+
 
 
 // ========== Blog Modal Functionality ==========
-const blogLinks   = document.querySelectorAll(".blog-post-item a");
-const blogModal   = document.getElementById("blogModal");
-const closeBtn    = blogModal.querySelector(".blog-modal-close");
-const modalImg    = document.getElementById("modalImage");
-const modalTitle  = document.getElementById("modalTitle");
-const modalText   = document.getElementById("modalText");
 
+// 1. Grab all relevant elements
+const blogLinks     = document.querySelectorAll(".blog-post-item a");
+const blogModal     = document.getElementById("blogModal");
+const closeBtn      = blogModal.querySelector(".blog-modal-close");
+const modalImg      = document.getElementById("modalImage");
+const modalCategory = document.getElementById("modalCategory");
+const modalDate     = document.getElementById("modalDate");
+const modalTitle    = document.getElementById("modalTitle");
+const modalText     = document.getElementById("modalText");
+const modalDot      = document.getElementById("modalDot");
+
+// 2. On click of any blog item…
 blogLinks.forEach(link => {
   link.addEventListener("click", function(e) {
     e.preventDefault();
+
     const item = this.closest(".blog-post-item");
 
-    modalImg.src      = item.querySelector("img").src;
+    // Image
+    modalImg.src = item.querySelector("img").src;
+    // Category
+    modalCategory.innerText = item.querySelector(".blog-category").innerText;
+    
+    // Date (text + datetime attr)
+    const timeEl = item.querySelector("time");
+    modalDate.innerText = timeEl.innerText;
+    modalDate.setAttribute("datetime", timeEl.getAttribute("datetime"));
+    // Title & Text
     modalTitle.innerText = item.querySelector(".blog-item-title").innerText;
     modalText.innerText  = item.querySelector(".blog-text").innerText;
 
+    // Show modal
     blogModal.style.display = "flex";
   });
 });
 
-
+// 3. Close handlers
 closeBtn.addEventListener("click", () => {
   blogModal.style.display = "none";
 });
-
-
+// click outside content to close
 blogModal.addEventListener("click", function(e) {
   if (e.target === this) {
     blogModal.style.display = "none";
   }
 });
+// Esc key to close
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && blogModal.style.display === "flex") {
+    blogModal.style.display = "none";
+  }
+});
+
+// ========== Blog Modal Functionality (Alternative) ==========
+// const blogLinks   = document.querySelectorAll(".blog-post-item a");
+// const blogModal   = document.getElementById("blogModal");
+// const closeBtn    = blogModal.querySelector(".blog-modal-close");
+// const modalImg    = document.getElementById("modalImage");
+// const modalTitle  = document.getElementById("modalTitle");
+// const modalText   = document.getElementById("modalText");
+
+
+// blogLinks.forEach(link => {
+//   link.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     const item = this.closest(".blog-post-item");
+
+//     modalImg.src      = item.querySelector("img").src;
+//     modalTitle.innerText = item.querySelector(".blog-item-title").innerText;
+//     modalText.innerText  = item.querySelector(".blog-text").innerText;
+
+//     blogModal.style.display = "flex";
+//   });
+// });
+
+
+// closeBtn.addEventListener("click", () => {
+//   blogModal.style.display = "none";
+// });
+
+
+// blogModal.addEventListener("click", function(e) {
+//   if (e.target === this) {
+//     blogModal.style.display = "none";
+//   }
+// });
 
 
 // ========== Contact Form Validation ==========
