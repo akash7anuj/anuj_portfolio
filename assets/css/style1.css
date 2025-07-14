@@ -60,7 +60,7 @@
   border-radius: 20px;
   position: relative;
   cursor: pointer;
-   border: 1px solid var(--jet);
+  border: 1px solid var(--jet);
 }
 
 .blog-modal-close {
