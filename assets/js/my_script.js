@@ -179,40 +179,6 @@ document.addEventListener("keydown", e => {
   }
 });
 
-// ========== Blog Modal Functionality (Alternative) ==========
-// const blogLinks   = document.querySelectorAll(".blog-post-item a");
-// const blogModal   = document.getElementById("blogModal");
-// const closeBtn    = blogModal.querySelector(".blog-modal-close");
-// const modalImg    = document.getElementById("modalImage");
-// const modalTitle  = document.getElementById("modalTitle");
-// const modalText   = document.getElementById("modalText");
-
-
-// blogLinks.forEach(link => {
-//   link.addEventListener("click", function(e) {
-//     e.preventDefault();
-//     const item = this.closest(".blog-post-item");
-
-//     modalImg.src      = item.querySelector("img").src;
-//     modalTitle.innerText = item.querySelector(".blog-item-title").innerText;
-//     modalText.innerText  = item.querySelector(".blog-text").innerText;
-
-//     blogModal.style.display = "flex";
-//   });
-// });
-
-
-// closeBtn.addEventListener("click", () => {
-//   blogModal.style.display = "none";
-// });
-
-
-// blogModal.addEventListener("click", function(e) {
-//   if (e.target === this) {
-//     blogModal.style.display = "none";
-//   }
-// });
-
 
 // ========== Contact Form Validation ==========
 const form = document.querySelector("[data-form]");
@@ -251,3 +217,15 @@ navLinks.forEach(link => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+
+
+document.addEventListener('contextmenu', event => event.preventDefault()); // disables right-click
+
+document.onkeydown = function(e) {
+  // Disable Ctrl+U, Ctrl+Shift+I, Ctrl+S, F12, etc.
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'U' || e.key === 'S')) return false;
+  if (e.key === 'F12') return false;
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) return false;
+};
+
