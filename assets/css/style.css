@@ -57,6 +57,16 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  --anuj1-white: rgb(228, 227, 226);
+  --main-text-color: #fff;
+
+  --modal-overlay: rgba(0,0,0,0.6);
+  --modal-bg:        var(--smoky-black);
+  --modal-text:      var(--white-2);
+  --modal-border:    var(--jet);
+
+  --navbar-black: hsla(240, 1%, 17%, 0.75);
+
   /**
    * typography
    */
@@ -96,6 +106,62 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+
+}
+
+/* → add this class to <body> (or swap with .dark‑mode) */
+.light-mode {
+  /* gradients */
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(240, 1%, 75%) 3%,
+      hsl(0,   0%, 81%) 97%);
+  
+  --bg-gradient-jet: linear-gradient(to bottom right,
+      hsla(240, 1%, 82%, 0.251) 0%,
+      hsla(240, 2%, 89%, 0)     100%), hsl(240, 2%, 87%);
+  
+  --bg-gradient-yellow-1: linear-gradient(to bottom right,
+      hsl(45,  100%, 71%) 0%,
+      hsla(36, 100%, 69%, 0) 50%);
+  
+  --bg-gradient-yellow-2: linear-gradient(135deg,
+      hsla(45, 100%, 71%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0)     59.86%), hsl(240, 2%, 87%);
+  
+  --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 75%)       0%,
+      hsla(0, 0%, 75%, 0)   50%);
+  
+  --text-gradient-yellow: linear-gradient(to right,
+      hsl(45, 100%, 72%),
+      hsl(35, 100%, 68%));
+
+  /* solids (inverted lightness) */
+  --jet:               hsl(0,   0%, 78%);
+  --onyx:              hsl(240, 1%, 83%);
+  --eerie-black-1:     hsl(240, 2%, 87%);
+  --eerie-black-2:     hsl(240, 2%, 88%);
+  --smoky-black:       hsl(0,   0%, 93%);
+  
+  --white-1:           hsl(0,   0%, 0%);
+  --white-2:           hsl(0,   0%, 2%);
+  
+  --light-gray:        hsl(0,   0%, 16%);
+  --light-gray-70:     hsla(0,   0%, 16%, 0.7);
+  
+  --orange-yellow-crayola: hsl(45, 100%, 40%);    /* rgb(204,153,0) – #CC9900 */
+  --vegas-gold:            hsl(45,  54%, 30%);    /* rgb(118, 97,35) – #766123 */
+  --bittersweet-shimmer:   hsl(0,   43%, 30%); 
+
+  --anuj1-white: rgb(41,  41,  41);   /* hex #292929 */
+  --main-text-color: #000;
+
+  --modal-overlay: rgba(255,255,255,0.6);
+  --modal-bg:        var(--white-1);
+  --modal-text:      var(--jet);
+  --modal-border:    var(--light-gray);
+
+  --navbar-black: hsla(240, 1%, 83%, 0.75);
 
 }
 
@@ -163,6 +229,8 @@ html {
 
 body {
   background: var(--smoky-black);
+  color: var(--main-text-color);
+  transition: color 0.3s;
 }
 
 
@@ -351,7 +419,7 @@ main {
 
 .sidebar.active {
   /* max-height: 405px; */
-  max-height: 430px;
+  max-height: 500px;
 }
 
 .sidebar-info {
@@ -501,7 +569,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-black);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -1017,6 +1085,10 @@ main {
 
 .softskill {
   width: 45%;
+}
+
+.resume-text{
+  color: var(--anuj1-white);
 }
 
 

@@ -219,6 +219,28 @@ navLinks.forEach(link => {
 });
 
 
+const toggle = document.getElementById("themeToggle");
+    const label  = document.getElementById("modeLabel");
+    const body   = document.body;
+
+    // Initialize based on saved preference
+    const saved = localStorage.getItem("darkMode") === "false"
+      ? false
+      : true;
+    body.classList.toggle("light-mode", !saved);
+    toggle.checked = !saved;
+    label.textContent = saved ? "Light Mode" : "Dark Mode";
+
+    // Listen for changes
+    toggle.addEventListener("change", () => {
+      const isLight = toggle.checked;
+      body.classList.toggle("light-mode", isLight);
+      // save inverse of dark-mode
+      localStorage.setItem("darkMode", !isLight);
+      label.textContent = isLight ? "Dark Mode" : "Light Mode";
+    });
+
+
 
 document.addEventListener('contextmenu', event => event.preventDefault()); // disables right-click
 
@@ -228,4 +250,6 @@ document.onkeydown = function(e) {
   if (e.key === 'F12') return false;
   if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) return false;
 };
+
+
 
