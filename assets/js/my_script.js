@@ -242,14 +242,14 @@ const toggle = document.getElementById("themeToggle");
 
 
 
-// document.addEventListener('contextmenu', event => event.preventDefault()); // disables right-click
+document.addEventListener('contextmenu', event => event.preventDefault()); // disables right-click
 
-// document.onkeydown = function(e) {
-//   // Disable Ctrl+U, Ctrl+Shift+I, Ctrl+S, F12, etc.
-//   if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'U' || e.key === 'S')) return false;
-//   if (e.key === 'F12') return false;
-//   if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) return false;
-// };
+document.onkeydown = function(e) {
+  // Disable Ctrl+U, Ctrl+Shift+I, Ctrl+S, F12, etc.
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'U' || e.key === 'S')) return false;
+  if (e.key === 'F12') return false;
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) return false;
+};
 
 
 
