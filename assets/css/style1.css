@@ -208,7 +208,7 @@
 }
 
 input:checked + .slider {
-    background-color: var(--orange-yellow-crayola);
+    background-color: #333;
 }
 
 input:checked + .slider:before {
