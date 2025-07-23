@@ -8,7 +8,7 @@
 .btn-resume {
     padding: 4px 20px;
     font-size: 15px;
-    color: #f1c40f;
+    color: var(--light-gray);
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #f1c40f;
     border-radius: 8px;
@@ -19,8 +19,8 @@
 }
 
 .btn-resume:hover {
-    background: rgb(10, 10, 10);
-    /* color: whitesmoke; */
+    background: var(--bg-gradient-jet);
+    color: var(--main-text-color);
     box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
 }
 
@@ -213,4 +213,59 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(18px);
+}
+
+
+.project-style{
+    width: 100%;
+    position: relative;
+    background: var(--border-gradient-onyx);
+    height: 100%;
+    box-shadow: var(--shadow-4);
+    border-radius: 16px;
+    z-index: 1;
+    border: 1px solid var(--jet);
+}
+.project-button{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+
+.btn-project{
+    padding: 4px 15px;
+    font-size: 15px;
+    color: var(--light-gray-70);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    background: var(--border-gradient-onyx);
+    box-shadow: var(--shadow-4);
+    border-radius: 16px;
+    z-index: 1;
+    border: 1px solid var(--jet);
+}
+
+.btn-project:hover{
+    color: var(--bg-gradient-jet);
+     background: var(--border-gradient-onyx);
+}
+
+.proj-img{
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 1248px){
+     .project-button{
+    gap:5px;
+  }
+
 }
