@@ -253,3 +253,16 @@ document.onkeydown = function(e) {
 
 
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      await navigator.serviceWorker.register('/sw-resume.js', { scope: '/' });
+      console.log('Resume SW registered');
+    } catch (e) {
+      console.warn('SW reg failed', e);
+    }
+  });
+}
+
+
+
