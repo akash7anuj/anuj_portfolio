@@ -71,6 +71,8 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+// ========== Life Filtering & Search Functionality ==========
+
 function setupFilter(suffix = '') {
   const sel         = document.querySelector(`[data-select${suffix}]`);
   const selItems    = document.querySelectorAll(`[data-select-item${suffix}]`);
@@ -253,16 +255,82 @@ document.onkeydown = function(e) {
 
 
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', async () => {
-    try {
-      await navigator.serviceWorker.register('/sw-resume.js', { scope: '/' });
-      console.log('Resume SW registered');
-    } catch (e) {
-      console.warn('SW reg failed', e);
-    }
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', async () => {
+//     try {
+//       await navigator.serviceWorker.register('/sw-resume.js', { scope: '/' });
+//       console.log('Resume SW registered');
+//     } catch (e) {
+//       console.warn('SW reg failed', e);
+//     }
+//   });
+// }
+
+
+/* -----------------------------------------
+   DISCLAIMER MODAL (with outside-click close)
+------------------------------------------*/
+
+const disclaimerItems = document.querySelectorAll("[data-disclaimer-item]");
+const disclaimerModal = document.querySelector("[data-disclaimer-modal]");
+const disclaimerOverlay = document.querySelector("[data-disclaimer-overlay]");
+const disclaimerClose = document.querySelector("[data-disclaimer-close]");
+
+const disclaimerModalTitle = document.querySelector("[data-disclaimer-modal-title]");
+const disclaimerModalText = document.querySelector("[data-disclaimer-modal-text]");
+
+
+// OPEN MODAL
+disclaimerItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const title = item.querySelector("[data-disclaimer-title]").innerHTML;
+    const text = item.querySelector("[data-disclaimer-text]").innerHTML;
+
+    disclaimerModalTitle.innerHTML = title;
+    disclaimerModalText.innerHTML = text;
+
+    disclaimerModal.classList.add("active");
+    disclaimerOverlay.classList.add("active");
   });
+});
+
+
+// CLOSE MODAL (X button)
+disclaimerClose.addEventListener("click", closeDisclaimerModal);
+
+
+// CLOSE MODAL (overlay click)
+disclaimerOverlay.addEventListener("click", closeDisclaimerModal);
+
+
+// CLOSE MODAL when clicking outside the modal box
+disclaimerModal.addEventListener("click", (event) => {
+  const modalBox = disclaimerModal.querySelector(".modal");
+
+  // Check if clicked outside the modal box
+  if (!modalBox.contains(event.target)) {
+    closeDisclaimerModal();
+  }
+});
+
+
+// FUNCTION — Close modal
+function closeDisclaimerModal() {
+  disclaimerModal.classList.remove("active");
+  disclaimerOverlay.classList.remove("active");
 }
 
+// // Search inside disclaimer content
+// const disclaimerSearch = document.getElementById("disclaimerSearch");
+// const disclaimerItem = document.querySelector("[data-disclaimer-text]");
 
+// disclaimerSearch.addEventListener("input", () => {
+//   const query = disclaimerSearch.value.toLowerCase();
+//   const content = disclaimerItem.innerText.toLowerCase();
 
+//   if (content.includes(query)) {
+//     disclaimerItem.parentElement.style.display = "block";
+//   } else {
+//     disclaimerItem.parentElement.style.display = "none";
+//   }
+// });

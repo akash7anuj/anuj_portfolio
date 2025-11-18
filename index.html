@@ -67,12 +67,15 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
 
   <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style1.css" />
+ 
+  <!-- <link rel="stylesheet" href="./assets/css/password.css"> -->
 
   <!--
     - google font link
@@ -82,7 +85,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="assets/css/style1.css" />
+  <!-- <link rel="stylesheet" href="assets/css/life.css" /> -->
 </head>
 
 <body>
@@ -94,6 +97,7 @@
     <!--
       - #SIDEBAR
     -->
+<!-- <script src="assets\js\life2.js"></script> -->
 
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
@@ -101,7 +105,7 @@
           <!-- <img src="./assets/images/my-avatar.png" alt="Anuj" width="80"> -->
           <!-- <img src="./assets/images/about_image/anuj_logo_image.jpg" alt="ANUJ KUMAR SINGH" class="logo"> -->
           <!-- <img src="./assets/images/about_image/anuj_logo_image.jpg" alt="ANUJ KUMAR SINGH" class="thumbnail" onclick="openModal(this.src)"> -->
-          <a href="assets/images/about_image/anuj_logo_image.jpg" target="_blank"><img
+          <a href="./images/about_image/anuj_logo_image.jpg" target="_blank"><img
               src="assets/images/about_image/anuj_logo_image.jpg" class="logo" /></a>
         </figure>
 
@@ -245,15 +249,15 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Project</button>
           </li>
-
+          
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Profile</button>
+          </li>
+          
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Life</button>
           </li>
 
           <li class="navbar-item">
@@ -609,14 +613,11 @@
           <h3 class="h3 clients-title">Gallery</h3>
 
           <ul class="clients-list has-scrollbar">
-
             <li class="clients-item">
               <a href="assets\images\about_image\nptel_ML_DL.png" target="_blank">
                 <img src="assets\images\about_image\nptel_ML_DL.png" alt="NPTEL" loading="lazy" />
               </a>
             </li>
-
-            
 
             <li class="clients-item">
               <a href="assets\images\about_image\award.jpg" target="_blank">
@@ -704,578 +705,286 @@
         </section>
       </article>
 
-      <!--
-        - #RESUME
-      -->
+      <!-- ===== Life / Thoughts section (replace resume) ===== -->
 
-      <article class="resume" data-page="resume" id="resume">
+      <article class="portfolio life-article" data-page="life">
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Life</h2>
         </header>
 
-        <!-- <div class="resume-b">
-          <ul class="filter-resume">
-
-            <li class="filter-item">
-              <a href="#resume">
-                <button class="active">All</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#skill">
-                <button>Skills</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#education">
-                <button>Education</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#project">
-                <button>projects</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#achievements">
-                <button>Achievements</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#softskill">
-                <button>Soft Skill</button></a>
-            </li>
-
-            <li class="filter-item">
-              <a href="#certificates">
-                <button>Certificates</button></a>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select-blog>
-
-              <div class="select-value" data-select-value-blog>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button>All</button>
+        <section class="Life life-grid">
+          <!-- Left column: filters + posts -->
+          <div class="life-left">
+            <!-- Filter buttons (container for delegation) -->
+            <ul class="filter-list" id="lifeFilterList" role="tablist" aria-label="Life categories">
+              <li class="filter-item">
+                <button type="button" class="filter-btn active" data-life-filter-btn data-life-filter="all">
+                  All
+                </button>
               </li>
-
-              <li class="select-item">
-                <a href="#skill">
-                  <button>Skills</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="me">
+                  Me
+                </button>
               </li>
-              <li class="select-item">
-                <a href="#education">
-                  <button>Education</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="growth">
+                  Growth
+                </button>
               </li>
-
-              <li class="select-item">
-                <a href="#project">
-                  <button>projects</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="technical">
+                  Technical
+                </button>
               </li>
-
-              <li class="select-item">
-                <a href="#achievements">
-                  <button>Achievements</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="startup">
+                  Startup
+                </button>
               </li>
-
-              <li class="select-item">
-                <a href="#softskill">
-                  <button>Soft Skill</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="recommendations">
+                  Recommended
+                </button>
               </li>
-
-              <li class="select-item">
-                <a href="#certificates">
-                  <button>Certificates</button></a>
+              <li class="filter-item">
+                <button type="button" class="filter-btn" data-life-filter-btn data-life-filter="others">
+                  Others
+                </button>
               </li>
-
             </ul>
 
+            <!-- Select dropdown (mobile) -->
+            <div class="filter-select-box">
+              <button type="button" class="filter-select" data-life-select>
+                <div class="select-value" data-life-select-value>
+                  Select category
+                </div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list" data-life-select-list>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="all">
+                    All
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="me">
+                    Me
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="growth">
+                    Growth
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="technical">
+                    Technical
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="startup">
+                    Startup
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="recommendations">
+                    Recommended
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button type="button" data-life-select-item data-value="others">
+                    Others
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="life-right">
+              <!-- Search box -->
+              <div class="right-search-box">
+                <h4 class="search-title">Search</h4>
+                <input type="text" id="lifeSearch" class="input-field search-input"
+                  placeholder="Search posts, tags, text..." />
+              </div>
+            </aside>
+
+            <ul class="blog-posts-list posts-list" id="lifePosts">
+              <!-- PROTECTED post (has password) -->
+
+              <li class="project-item blog-post-item active" data-life-filter-item data-life-category="growth"
+                data-life-post-slug="depression" > 
+                <!-- data-life-password="anuj123" -->
+                <div class="project-style">
+                  <div class="proj-link" role="button" aria-label="Open post: Depression">
+                    <a>
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                        <img src="./assets/images/life/dipression.png" alt="Depression" loading="lazy" />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                    <p class="blog-category">Healing</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Nov 08, 2025</time>
+                  </div>
+                    <h3 class="blog-item-title">
+                      Depression — Understanding & Caring
+                    </h3>
+
+                    <p class="blog-text testimonials-text">
+                      Depression can feel like a fracture of the mind — small
+                      steps, consistent care, and reaching out help. This
+                      short note explains signs, simple daily practices, and
+                      when to seek help.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="project-item blog-post-item active" data-life-filter-item data-life-category="technical"
+                data-life-post-slug="deep-learning" data-life-password="anuj123">
+                <div class="project-style">
+                  <div class="proj-link" role="button" aria-label="Open post: deep-learning">
+                    <a>
+                      <figure class="project-img art-img">
+                        <div class="project-item-icon-box">
+                          <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                        <img src="assets/images/life/deeplearning.png" alt="Depression" loading="lazy" />
+                      </figure>
+                    </a>
+                  </div>
+
+                     <div class="blog-content">
+                    <div class="blog-meta">
+                    <p class="blog-category">Learning</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Nov 09, 2025</time>
+                  </div>
+                    <h3 class="blog-item-title">
+                      Deep Learning — learn from data
+                    </h3>
+
+                    <p class="blog-text testimonials-text">
+                      Deep learning is a branch of artificial intelligence that teaches computers to learn from data the same way humans learn from experience.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Another example post -->
+              <li class="project-item blog-post-item active" data-life-filter-item data-life-category="me"
+                data-life-post-slug="traveling" data-life-password="anuj123">
+                <div class="project-style">
+                  <div class="proj-link" role="button" aria-label="Open post: Traveling">
+                    <a href="">
+                      <figure class="project-img art-img">
+                        <div class="project-item-icon-box">
+                          <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                        <img src="./assets/images/life/traveling.png" alt="Traveling" loading="lazy" />
+                      </figure>
+                    </a>
+                  </div>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                    <p class="blog-category">Habit</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-05-15">Nov 11, 2025</time>
+                  </div>
+
+                    <h3 class="blog-item-title">Traveling and Enjoying Nature</h3>
+
+                    <p class="blog-text testimonials-text">
+Some of my best memories come from small trips where I explore new places and cities, enjoy mountain views, feel the freshness of waterfalls, walk through green forests, and spend time in peaceful villages that calm my mind.                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Add more posts similarly -->
+            </ul>
           </div>
-        </div> -->
+        </section>
 
-        <div class="resume-main">
-          <section class="timeline" id="skill">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
+        <!-- ===== Life / Thoughts section (replace resume) ===== -->
+
+        <section class="testimonials">
+          <ul class="goal-list disclaimer">
+            <li class="testimonials-item service-item" data-disclaimer-item>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-disclaimer-title>
+                  Disclaimer:
+                </h4>
+
+                <p class="service-item-text testimonials-text" data-disclaimer-text>
+                  All content in this section — my thoughts, ideas, opinions,
+                  recommendations, technical notes, and growth/life lessons —
+                  is written from my personal experience and understanding. It
+                  may not always be fully accurate or applicable to everyone.
+                  <br /><br />
+                  Some posts may include references, quotes, or learnings
+                  taken from books, mentors, videos, or other creators. In
+                  such cases, credit is given wherever possible. If anything
+                  is incorrectly credited or you want your content removed,
+                  please contact me.
+                  <br /><br />
+                  You are free to read and share this content for learning or
+                  personal use. Please avoid copying or republishing it
+                  without permission.
+
+                  <br /><br />
+                  If you have any issues, suggestions, corrections, or want to
+                  talk, feel free to message me through the contact form or
+                  email me directly — I appreciate feedback.
+                  <br /><br />
+                  Thank you for reading and being part of my learning journey!
+                </p>
               </div>
+            </li>
+          </ul>
+        </section>
 
-              <h3 class="h3">SKILLS</h3>
+
+        <div id="pwModal" class="pw-modal" aria-hidden="true">
+          <div class="pw-modal-content" role="dialog" aria-modal="true" aria-labelledby="pwTitle">
+            <h3 id="pwTitle">Enter password to open</h3>
+            <input id="pwInput" type="password" placeholder="Password" autocomplete="off" />
+            <p id="pwError" class="error" aria-live="polite">Incorrect password — try again.</p>
+            <div class="pw-actions">
+              <button id="pwSubmit" class="btn-resume">Submit</button>
+              <button id="pwCancel" class="btn-resume">Cancel</button>
             </div>
+          </div>
+        </div>
 
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Language <small>:-</small>
-                </h4>
-                <span style="padding-left: 25px"> • C</span>
-                <span style="padding-left: 25px"> • Core JAVA</span>
-                <span style="padding-left: 25px"> • Python</span>
-              </li>
 
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Machine Learning</h4>
-              </li>
+        <!-- - disclaimer modal   -->
 
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Deep Learning</h4>
-              </li>
+        <div class="modal-container" data-disclaimer-modal>
+          <div class="" data-disclaimer-overlay></div>
 
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Prompt Engineering</h4>
-              </li>
+          <section class="disclaimer_model modal">
+            <button class="modal-close-btn" data-disclaimer-close>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
 
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Natural Language Processing
-                </h4>
-              </li>
+            <h4 class="service-item-title" data-disclaimer-modal-title></h4>
 
-              <li class="timeline-item">
-                <!-- <h4 class="h4 timeline-item-title">Computer Vision <small
-                  style="color: rgb(228, 227, 226); padding-left: 5px;"> (YOLO, OpenCV)</small></h4> -->
+            <div class="service-item-text" data-disclaimer-modal-text></div>
 
-                <h4 class="h4 timeline-item-title" style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      gap: 4px;
-                    ">
-                  Computer Vision
-                  <small class="resume-text"> (YOLO, OpenCV)</small>
-                </h4>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      gap: 4px;
-                    ">
-                  Full Web Development
-                  <small class="resume-text">
-                    (HTML, CSS, JavaScript, Python(flask))</small>
-                </h4>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      gap: 4px;
-                    ">
-                  Data Structures and Algorithms
-                </h4>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline" id="education">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">EDUCATION</h3>
+            <div class="resume-buttons">
+              <a class="btn-resume view navbar-link" data-nav-link>Contact</a>
             </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      gap: 4px;
-                    ">
-                  Bachelor of Computer Applications
-                  <p>(DS & Ai)</p>
-                  <small class="resume-text" style="padding-left: 25px">
-                    (2024-27)</small>
-                </h4>
-
-                <span>CGPA - 8.12</span>
-
-                <p class="timeline-text">
-                  Gopal Narayan Singh University, Jamuhar
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title" style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      gap: 4px;
-                    ">
-                  Higher Secondary School
-                  <small class="resume-text" style="padding-left: 25px">
-                    (2022-24)</small>
-                </h4>
-
-                <span>74.6 %</span>
-
-                <p class="timeline-text">Shershah College, Sasaram</p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Secondary School
-                  <small class="ms-3 resume-text" style="padding-left: 25px">
-                    (2021-22)</small>
-                </h4>
-
-                <span>82.6 %</span>
-
-                <p class="timeline-text">St. Pauls School, Sasaram</p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline" id="project">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">PROJECTS</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Automated Attendance System using Face recognition with
-                  Multi-Class Handling
-                  <a href="https://github.com/akash7anuj/Attendance_System.git" target="_blank"
-                    rel="noopener noreferrer" aria-label="View on GitHub">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </h4>
-                <p class="resume-text">
-                  Python, OpenCV, face_recognition, Flask, HTML, CSS, JS,
-                  Bootstrap, JSON
-                </p>
-
-                <div style="font-size: 13px">
-                  <div style="display: flex">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px">
-                      Implemented a secure login system using face
-                      recognition, eyeblink verification, and password
-                      authentication for students, teachers, and admins.
-                      Enabled real-time liveness detection and role-based
-                      access control.
-                    </p>
-                  </div>
-                  <div style="display: flex">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px">
-                      Developed a timetable-driven attendance system with
-                      integrated camera control. Automatically starts
-                      attendance with web cameras or allows manual control on
-                      mobile devices. Classifies individuals as
-                      Teacher/Student/Unknown and verifies the correct teacher
-                      before marking student attendance, Reduced manual effort
-                      by 85% to 90%.
-                    </p>
-                  </div>
-                  <div style="display: flex">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px">
-                      Designed user-friendly dashboards: students can view
-                      attendance records; teachers can start attendance,
-                      view/download attendance reports, access recorded
-                      sessions, and live stream classes; admins can manage
-                      teachers/students, upload timetables/subjects, and
-                      monitor live sessions across multiple classes
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  EmotionandSentiment Classification using NLP
-                  <a href="https://github.com/akash7anuj/Vocabulary-Learning-System" target="_blank"
-                    rel="noopener noreferrer" aria-label="View on GitHub">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </h4>
-                <p class="resume-text">
-                  Python, Pandas, Matplotlib, Seaborn, Wordcloud,
-                  Scikit-learn, TensorFlow, Keras
-                </p>
-
-                <div style="font-size: 13px">
-                  <div style="display: flex">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px">
-                      Built a complete NLP pipeline to classify text into 6
-                      and 13 emotion categories and binary sentiments
-                      (positive/negative) using techniques like text cleaning,
-                      tokenization, stopword removal, TF-IDF vectorization,
-                      StandardScaler, and label encoding.
-                    </p>
-                  </div>
-                  <div style="display: flex">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px">
-                      Trained and compared multiple ML models (Logistic
-                      Regression, KNN, SVM, Decision Tree, Random Forest, MLP)
-                      with ensemble learning and Grid Search optimization,
-                      then developed an LSTM-based deep learning model with
-                      EarlyStopping — achieving high accuracy across classes
-                      (e.g., Joy 99.4%, Sadness 97.4%, Anger 98%) and strong
-                      interpretability through WordCloud and Confusion Matrix
-                      visualizations.
-                    </p>
-                  </div>
-                  <!-- <div style="display: flex;">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px;">
-                    </p>
-                  </div> -->
-                </div>
-              </li>
-
-              <!-- <li class="timeline-item">
-
-                <h4 class="h4 timeline-item-title">
-                  GenieTalk – Interactive AI Guide and chatbot.
-                  <a href="https://github.com/akash7anuj/GenieTalk" target="_blank" rel="noopener noreferrer"
-                    aria-label="View on GitHub">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </h4>
-                <p class="resume-text">Streamlit, google-generativeai, SpeechRecognition, pyttsx3, PyPDF2, googletrans
-                </p>
-
-                <div style="font-size: 13px;">
-                  <div style="display: flex;">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px;">
-                      Developed a multifunctional AI chatbot capable of handling voice communication, file input,
-                      language translation,
-                      and adaptive task modes for coding assistance, emotional support, resume review, math problem
-                      solving, text summarization, and AI/ML tutoring.
-
-                    </p>
-                  </div>
-
-                  <div style="display: flex;">
-                    <span>• </span>
-                    <p class="timeline-text" style="margin-left: 5px;">
-                    </p>
-                  </div> 
-                </div>
-
-              </li> -->
-            </ol>
-          </section>
-
-          <section class="timeline" id="achievements">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Achievements</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  1st Runner-Up, Technovate 1.0 – IBM Day 2025
-                </h4>
-
-                <p class="timeline-text">
-                  Awarded by IBM and Cognitel at GNSU for developing a chatbot
-                  that addressed a real-world problem.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Hackathon Participant (Senior), Techphilia 8.0
-                </h4>
-
-                <p class="timeline-text">
-                  Amity University Patna (Apr 2025), Participated as Team
-                  Leader, using strategic thinking and project planning to
-                  develop an AI-powered energy optimization system that
-                  forecasts consumption and promotes sustainability
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Attend the IBM Immersion Program 2025 at the IBM BCS
-                  Building, Kolkata
-                </h4>
-
-                <p class="timeline-text">
-                  Explored AI, frontend development, data visualization,
-                  chatbot, problem-solving and gaining industry insights.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="skill" id="softskill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <div class="skills-list content-card" style="display: flex; flex-wrap: wrap; gap: 40px">
-              <div class="techskill">
-                <h4 style="text-align: center" class="resume-text">
-                  Technical Skills
-                </h4>
-                <ul class="skills-list content-card">
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        GitHub (Version Control)
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Linux OS
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Streamlit (for building AI apps)
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        VS Code, Jupyter Notebook
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Databases: MySQL, MongoDB
-                      </h5>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="softskill">
-                <h4 style="text-align: center; font-size: 16pxki" class="resume-text">
-                  Soft Skills
-                </h4>
-
-                <ul class="skills-list content-card">
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Team Coordination
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Strategic Thinking
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Project Planning & Delivery
-                      </h5>
-                    </div>
-                  </li>
-
-                  <li class="skills-item">
-                    <div style="display: flex">
-                      <span style="color: gold">• </span>
-                      <h5 class="timeline-text h5" style="margin-left: 5px">
-                        Quick Learning of New Technologies
-                      </h5>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="timeline certificates" id="certificates">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Certificates</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Utkranti - Catalyst Kaksha Program – Participant
-                  <a href="https://shorturl.at/VNkaz" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </h4>
-
-                <p class="timeline-text">
-                  Hands-on workshop on “Idea To Business Plan” organized by
-                  IIT Mandi Catalyst at GNSU in Sasaram.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Front End Technologies – IBM Career Education Program
-
-                  <a href="https://courses.ibmcep.cognitiveclass.ai/certificates/8120e44d3c70440b920adb2577daa26a"
-                    target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </h4>
-
-                <p class="timeline-text">
-                  Completed training in HTML, CSS, and JavaScript as part of
-                  IBM’s Front End Technologies course.
-                </p>
-              </li>
-            </ol>
           </section>
         </div>
       </article>
@@ -1791,9 +1500,9 @@
               <button data-filter-btn-blog>Certificates</button>
             </li>
 
-            <li class="filter-item">
+            <!-- <li class="filter-item">
               <button data-filter-btn-blog>Blogs</button>
-            </li>
+            </li> -->
 
             <!-- <li class="filter-item">
               <button data-filter-btn-blog>Learning</button>
@@ -1832,9 +1541,9 @@
                 <button data-select-item-blog>Certificates</button>
               </li>
 
-              <li class="select-item">
+              <!-- <li class="select-item">
                 <button data-select-item-blog>Blogs</button>
-              </li>
+              </li> -->
 
               <!-- <li class="select-item">
                 <button data-select-item-blog>Learning</button>
@@ -1847,7 +1556,6 @@
           </div>
 
           <ul class="blog-posts-list">
-
             <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
               <a href="#">
                 <figure class="blog-banner-box">
@@ -1859,20 +1567,24 @@
                     <span class="dot"></span>
                     <time datetime="2022-05-15">Nov 10, 2025</time>
                   </div>
-                  <h3 class="h3 blog-item-title">ML & DL– Fundamentals and Applications</h3>
+                  <h3 class="h3 blog-item-title">
+                    ML & DL– Fundamentals and Applications
+                  </h3>
                   <div class="blog-text testimonials-text">
                     <p>
-                      Machine Learning and Deep Learning – Fundamentals and Applications (NPTEL, IIT Guwahati)
+                      Machine Learning and Deep Learning – Fundamentals and
+                      Applications (NPTEL, IIT Guwahati)
                     </p>
-                    <p> Completed a 12-week course covering core ML/DL concepts, algorithms, and real-world
-                      applications.
+                    <p>
+                      Completed a 12-week course covering core ML/DL concepts,
+                      algorithms, and real-world applications.
                     </p>
                   </div>
                 </div>
               </a>
             </li>
 
-             <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
+            <li class="project-item blog-post-item active" data-filter-item-blog data-category="certificates">
               <a href="#">
                 <figure class="blog-banner-box">
                   <img src="assets/images/about_image/be10x.png" alt="NPTEL" loading="lazy" />
@@ -1883,10 +1595,15 @@
                     <span class="dot"></span>
                     <time datetime="2022-05-15">Oct 26, 2025</time>
                   </div>
-                  <h3 class="h3 blog-item-title">AI Tools & ChatGPT Workshop – (be10x)</h3>
+                  <h3 class="h3 blog-item-title">
+                    AI Tools & ChatGPT Workshop – (be10x)
+                  </h3>
                   <div class="blog-text testimonials-text">
                     <p>
-                      Throughout this workshop, I explored some amazing tools like ChatGPT, Grok, Gamma, Napkin, NotebookLM, Claude, Julius, and GenSpark, among others. Each tool opened up new ways to work smarter.
+                      Throughout this workshop, I explored some amazing tools
+                      like ChatGPT, Grok, Gamma, Napkin, NotebookLM, Claude,
+                      Julius, and GenSpark, among others. Each tool opened up
+                      new ways to work smarter.
                     </p>
                   </div>
                 </div>
@@ -2181,11 +1898,11 @@
           <form action="https://formspree.io/f/xovlawoz" method="POST" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="full name" class="form-input" placeholder="Full name" required data-form-input />
-              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input />
               <input type="tel" name="phone" class="form-input" placeholder="Phone number" required data-form-input />
-
+              
               <input type="email" name="email" class="form-input" placeholder="Email address" required
-                data-form-input />
+              data-form-input />
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input />
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
@@ -2205,6 +1922,13 @@
   -->
   <!-- <script src="./assets/js/script.js"></script> -->
   <script type="module" src="./assets/js/my_script.js"></script>
+  <!-- <script src="./assets/js/life.js"></script> -->
+
+
+  <script src="./assets/js/life2.js"></script>
+  <script src="./assets/js/version.js"></script>
+
+
   <!-- <script src="./assets/js/resume-cache-buster.js"></script> -->
   <!-- <script src="./assets/js/anj.js"></script> -->
 
@@ -2213,8 +1937,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
 </body>
 
 </html>

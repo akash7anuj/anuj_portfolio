@@ -183,6 +183,7 @@
 
 a {
   text-decoration: none;
+  color: var(--orange-yellow-crayola);
 }
 
 li {

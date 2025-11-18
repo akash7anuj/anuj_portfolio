@@ -269,3 +269,169 @@ input:checked + .slider:before {
   }
 
 }
+
+
+/* -----------------------------------------
+   DISCLAIMER MODAL (with outside-click close)
+------------------------------------------*/
+.disclaimer{
+margin: 3rem 0 -15px;
+}
+
+.disclaimer_model{
+    background: var(--bg-gradient-jet);
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--jet);
+    max-height: 95vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* Container on right side */
+.right-search-box {
+  width: 100%;
+  background: var(--eerie-black-2);
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--jet);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Search heading */
+.right-search-box .search-title {
+  font-size: 1.1rem;
+  color: var(--white-1);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Search input (matching your form-input style) */
+.right-search-box .search-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  color: var(--white-2);
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.right-search-box .search-input::placeholder {
+  color: var(--light-gray);
+}
+
+.right-search-box .search-input:focus {
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0 0 6px rgba(255, 200, 0, 0.25);
+}
+
+/* ===== password box ========== */
+
+/* Lock icon overlay (for protected posts) */
+.protected-lock {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 6px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.protected-lock:hover {
+  transform: scale(1.12);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* modal */
+.pw-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999
+}
+
+.pw-modal-content {
+  background: var(--bg-gradient-jet);
+  padding: 18px;
+  border-radius: 10px;
+  width: 320px;
+  color: var(--text);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+}
+
+.pw-modal-content h3 {
+  margin: 0 0 10px
+}
+
+.pw-modal-content input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--white-1);
+  margin-bottom: 8px;
+  background: var(--bg-gradient-jet);
+  color: var(--text)
+}
+
+.pw-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end
+}
+
+/* .pw-actions button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 0;
+  background: var(--bg-gradient-jet);
+  color: var(--text);
+  cursor: pointer
+} */
+
+.error {
+  color: var(--bittersweet-shimmer);
+  display: none;
+  margin: 6px 0 8px;
+}
+
+/* responsive */
+@media (max-width:800px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    margin: 12px;
+    border-radius: 8px
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 12px
+  }
+
+  .posts {
+    grid-template-columns: 1fr
+  }
+}
+
+.art-img{
+ margin-bottom: 0px;
+}

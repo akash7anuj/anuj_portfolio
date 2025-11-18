@@ -1,0 +1,39 @@
+name: Update version.json (auto on push)
+
+# runs automatically on push to main or gh-pages (change if you use another branch)
+on:
+  push:
+    branches:
+      - main
+      - gh-pages
+
+# give GITHUB_TOKEN permission to write repository contents
+permissions:
+  contents: write
+
+jobs:
+  write-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (with write permission)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Create / update version.json
+        env:
+          BRANCH: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+        run: |
+          TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "{\"version\":\"${TIMESTAMP}\",\"sha\":\"${SHA}\"}" > version.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add version.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update version.json by action [skip ci]"
+            git push origin HEAD:${BRANCH}
+          else
+            echo "version.json unchanged - nothing to commit"
+          fi
